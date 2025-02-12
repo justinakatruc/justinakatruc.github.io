@@ -98,13 +98,12 @@ button {
     transition: all 0.5s ease;
   }
 
-
-
 @media (min-width: 576px) {
   .container-sm, .container {
     /* background-color: blue; */
     max-width: 540px; 
   } 
+  
 }
 
 @media (min-width: 768px) {
@@ -224,5 +223,44 @@ button {
 
 .bio {
   flex: 2;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+  .bio .header {
+    font-size: 3rem;
+  }
+  .bio .desc p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+  .bio .more {
+    display: flex;
+    gap: 3rem;
+  }
+    .more .interests, 
+    .more .techstack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    .more .title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .more .desc {
+      padding: 0 2rem;
+    }
+    .more ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .more li {
+      list-style-type: disc;
+      font-size: 1.2rem;
+    }
+      
+      
+    
+  
