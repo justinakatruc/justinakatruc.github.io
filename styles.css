@@ -222,7 +222,7 @@ button {
     font-size: 1.2rem;
   }
   .menu-toggle.active {
-    max-height: 11ch;
+    max-height: 15ch;
     margin: 1rem 0;
     padding: 0 1rem;
     gap: 1rem;
