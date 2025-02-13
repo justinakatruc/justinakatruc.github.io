@@ -147,6 +147,7 @@ button {
       } 
     }
     .navbar-wrapper .extender path {
+      fill: var(--text);
       transition: all 0.5s ease;
     }
     .navbar-wrapper .extender:hover path {
