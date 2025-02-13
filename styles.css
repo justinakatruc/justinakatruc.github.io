@@ -39,6 +39,10 @@ button {
   border: none;
 }
 
+.dark-background {
+  background-color: var(--dark-bg);
+}
+
 .page-wrapper {
   min-height: 100vh;
   display: flex;
@@ -134,7 +138,6 @@ button {
       transition: all 0.5s ease;
     }
     .navbar-wrapper .extender.active  {
-      fill: var(--textAnchor);
       transform: rotate(-90deg);
     }
   .navbar-wrapper .name {
@@ -319,6 +322,94 @@ button {
     }
       
       
-.dark-background {
+.projects {
+  padding: 7rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+  @media (min-width: 992px) {
+    .projects-wrapper {
+      flex-direction: row;
+      gap: 20rem;
+    } 
+  }
+  .projects-wrapper .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+.resume {
+  padding: 7rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+  @media (min-width: 992px) {
+    .resume-wrapper {
+      flex-direction: row;
+      gap: 20rem;
+    } 
+  }
+  .resume-wrapper .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+.contact {
+  padding: 7rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+  @media (min-width: 992px) {
+    .contact-wrapper {
+      flex-direction: row;
+      gap: 20rem;
+    } 
+  }
+  .contact-wrapper .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
   background-color: var(--dark-bg);
 }
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  .footer-wrapper .email {
+    color: #ffcc00;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  .footer-wrapper .email:hover {
+    color: #ff9900;
+  }
+  .copyright {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
