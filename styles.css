@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: system-ui;
   font-size: 16px;
   color: white;
   background-color: var(--dark-bgSoft);
@@ -61,6 +61,48 @@ button {
 .container {
   width: 100%;
 }
+  @media (min-width: 360px) {
+    .container {
+      /* background-color: yellow; */
+      max-width: 360px; 
+    } 
+  }
+  @media (min-width: 420px) {
+    .container {
+      /* background-color: grey; */
+      max-width: 400px; 
+    } 
+  }
+  @media (min-width: 576px) {
+    .container {
+      /* background-color: blue; */
+      max-width: 540px; 
+    } 
+  }
+  @media (min-width: 768px) {
+    .container {
+      /* background-color: green; */
+      max-width: 720px; 
+    } 
+  }
+  @media (min-width: 992px) {
+    .container {
+      /* background-color: red; */
+      max-width: 960px; 
+    } 
+  }
+  @media (min-width: 1240px) {
+    .container {
+      /* background-color: aqua; */
+      max-width: 1200px; 
+    } 
+  }
+  @media (min-width: 1440px) {
+    .container {
+      /* background-color: black; */
+      max-width: 1400px; 
+    } 
+  }
 
 .navbar-wrapper {
   width: 100%;
@@ -68,21 +110,19 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+  .navbar-wrapper .name {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .navbar-wrapper .links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-.name {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-  
 .activeNavColor {
   font-weight: bold;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .chatbot, .light-mode {
@@ -98,77 +138,6 @@ button {
     transition: all 0.5s ease;
   }
 
-@media (min-width: 576px) {
-  .container-sm, .container {
-    /* background-color: blue; */
-    max-width: 540px; 
-  } 
-  
-}
-
-@media (min-width: 768px) {
-  .container-md, .container-sm, .container {
-    /* background-color: green; */
-    max-width: 720px; 
-  } 
-}
-
-@media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container {
-    /* background-color: red; */
-    max-width: 960px; 
-  } 
-}
-
-@media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    /* background-color: black; */
-    
-    max-width: 1290px; 
-  } 
-}
-
-@media (max-width: 575.98px) {
-    .table-responsive-sm {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch; }
-      .table-responsive-sm > .table-bordered {
-        border: 0; } }
-  
-  @media (max-width: 767.98px) {
-    .table-responsive-md {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch; }
-      .table-responsive-md > .table-bordered {
-        border: 0; } }
-  
-  @media (max-width: 991.98px) {
-    .table-responsive-lg {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch; }
-      .table-responsive-lg > .table-bordered {
-        border: 0; } }
-  
-  @media (max-width: 1199.98px) {
-    .table-responsive-xl {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch; }
-      .table-responsive-xl > .table-bordered {
-        border: 0; } }
-
-
-.dark-background {
-  background-color: var(--dark-bg);
-}
-
 .info {
   padding: 10rem 0;
   display: flex;
@@ -177,8 +146,14 @@ button {
 
 .info-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
+  @media (min-width: 992px) {
+    .info-wrapper {
+      flex-direction: row;
+    } 
+  }
 
 .profile {
   flex: 1;
@@ -236,8 +211,14 @@ button {
   }
   .bio .more {
     display: flex;
+    flex-direction: column;
     gap: 3rem;
   }
+    @media (min-width: 576px) {
+      .bio .more {
+        flex-direction: row;
+      } 
+    }
     .more .interests, 
     .more .techstack {
       display: flex;
@@ -262,5 +243,6 @@ button {
     }
       
       
-    
-  
+.dark-background {
+  background-color: var(--dark-bg);
+}
