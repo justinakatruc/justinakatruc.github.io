@@ -12,3 +12,9 @@ $(document).ready(function() {
         $('#contactNav').addClass('activeNavColor');
     }
 });
+function toggleMenu() {
+    const extender = document.querySelector('.extender');
+    const menu = document.querySelector('.menu-toggle');
+    menu.classList.toggle('active');
+    extender.classList.toggle('active');
+}

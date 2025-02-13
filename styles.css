@@ -51,12 +51,17 @@ button {
   min-width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 1.2rem 0;
+  padding: 0.6rem 0;
   position: fixed;
   top: 0;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+  @media (min-width: 992px) {
+    .navbar {
+      padding: 1.2rem 0;
+    } 
+  }
 
 .container {
   width: 100%;
@@ -110,16 +115,61 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
+  .navbar-wrapper .extender {
+    display: flex;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+  }
+    @media (min-width: 992px) {
+      .navbar-wrapper .extender {
+        display: none;
+      } 
+    }
+    .navbar-wrapper .extender path {
+      transition: all 0.5s ease;
+    }
+    .navbar-wrapper .extender:hover path {
+      fill: var(--textAnchor);
+      transition: all 0.5s ease;
+    }
+    .navbar-wrapper .extender.active  {
+      fill: var(--textAnchor);
+      transform: rotate(-90deg);
+    }
   .navbar-wrapper .name {
     font-size: 1.5rem;
     font-weight: 700;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);    
   }
-  .navbar-wrapper .links {
+    @media (min-width: 992px) {
+      .navbar-wrapper .name {
+        position: static;
+        transform: none;
+      }
+    }
+  .navbar-wrapper .menu {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1rem;
   }
+  .menu .links {
+    display: none;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+    @media (min-width: 992px) {
+      .menu .links {
+        display: flex;
+      } 
+    }
+  .menu .mode {
+    display: flex;
+    gap: 1rem;
+  }
+  
 
 .activeNavColor {
   font-weight: bold;
@@ -127,6 +177,8 @@ button {
 
 .chatbot, .light-mode {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
   .chatbot:hover path,
   .light-mode:hover path {
@@ -137,6 +189,30 @@ button {
   .light-mode path {
     transition: all 0.5s ease;
   }
+
+
+  .menu-toggle {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .menu-toggle.active {
+    max-height: 11ch;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  @media (min-width: 992px) {
+    .menu-toggle {
+      display: none;
+    } 
+  }
+
+
 
 .info {
   padding: 10rem 0;
