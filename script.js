@@ -18,3 +18,14 @@ function toggleMenu() {
     menu.classList.toggle('active');
     extender.classList.toggle('active');
 }
+function toggleLight() {
+    const root = document.documentElement;
+    const currentTheme = root.getAttribute('data-theme');
+
+    if (currentTheme === 'light') {
+        root.setAttribute('data-theme', 'dark');
+    } else {
+        root.setAttribute('data-theme', 'light');
+    }
+}
+  

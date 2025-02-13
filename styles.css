@@ -6,19 +6,29 @@
 }
 
 :root {
-  --dark-bg: #23252f;
-  --dark-bgSoft: #272935;
-  --light-bg: white;
-  --light-bgSoft: #f7f7f7;
+  --bg: #23252f;
+  --bgSoft: #272935;
+  --text: #f7f7f7;
   --textSoft: #949da2;
   --textAnchor: #9adefb;
+  --shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme='light'] {
+  --bg: #f7f7f7;
+  --bgSoft: white;
+  --text: black;
+  --textSoft: #555;
+  --textAnchor: #007bff;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 body {
   font-family: system-ui;
   font-size: 16px;
-  color: white;
-  background-color: var(--dark-bgSoft);
+  color: var(--text);
+  background-color: var(--bgSoft);
+  transition: background-color 0.5s ease;
 }
 
 a {
@@ -41,32 +51,9 @@ button {
 }
 
 .dark-background {
-  background-color: var(--dark-bg);
+  background-color: var(--bg);
+  transition: all 0.5s ease;
 }
-
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar {
-  background-color: var(--dark-bgSoft);
-  width: fit-content;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  padding: 0.6rem 0;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-  @media (min-width: 992px) {
-    .navbar {
-      padding: 1.2rem 0;
-    } 
-  }
 
 .container {
   width: 100%;
@@ -111,6 +98,34 @@ button {
     .container {
       /* background-color: black; */
       max-width: 1400px; 
+    } 
+  }
+
+
+
+
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: fit-content;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.5s ease;
+}
+  @media (min-width: 992px) {
+    .navbar {
+      padding: 1.2rem 0;
     } 
   }
 
@@ -191,6 +206,7 @@ button {
   }
   .chatbot path,
   .light-mode path {
+    fill: var(--text);
     transition: all 0.5s ease;
   }
 
@@ -219,9 +235,12 @@ button {
 
 
 .info {
+  background-color: var(--bgSoft);
+  color: var(--text);
   padding: 10rem 0;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .info-wrapper {
@@ -259,6 +278,7 @@ button {
     .profile-info .title {
       font-size: 1.2rem;
       color: var(--textSoft);
+      transition: all 0.5s ease;
     }
     .profile-info a {
       text-align: center;
@@ -274,6 +294,7 @@ button {
   }
     .profile-social path {
       fill: var(--textAnchor);
+      transition: all 0.5s ease;
     }
 
 .bio {
@@ -324,9 +345,12 @@ button {
       
       
 .projects {
+  background-color: var(--bg);
+  color: var(--text);
   padding: 7rem 0;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .projects-wrapper {
@@ -346,9 +370,11 @@ button {
   }
 
 .resume {
+  background-color: var(--bgSoft);
   padding: 7rem 0;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .resume-wrapper {
@@ -368,9 +394,11 @@ button {
   }
 
 .contact {
+  background-color: var(--bg);
   padding: 7rem 0;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease;
 }
 
 .contact-wrapper {
@@ -393,7 +421,8 @@ button {
   display: flex;
   justify-content: center;
   padding: 1.5rem 0;
-  background-color: var(--dark-bg);
+  background-color: var(--bg);
+  transition: all 0.5s ease;
 }
 
 .footer-wrapper {
@@ -403,14 +432,16 @@ button {
   flex-direction: column;
 }
   .footer-wrapper .email {
-    color: #ffcc00;
+    color: var(--textAnchor);
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: all 0.5s ease;
   }
   .footer-wrapper .email:hover {
-    color: #ff9900;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
   }
   .copyright {
     font-size: 0.9rem;
-    color: #bbb;
+    color: var(--textSoft);
+    transition: all 0.5s ease;
   }
