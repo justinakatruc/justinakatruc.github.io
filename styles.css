@@ -417,6 +417,39 @@ button {
     font-size: 3rem;
     text-align: center;
   }
+  .contact-wrapper .form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-wrapper .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+    .form input, 
+    .form textarea {
+      width: 100%;
+      padding: 0.5rem;
+    }
+    .form input::placeholder, 
+    .form textarea::placeholder {
+      color: var(--textSoft);
+    }
+    .form button {
+      padding: 0.5rem;
+      background-color: var(--textAnchor);
+      color: var(--bg);
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .form button:hover {
+      background-color: var(--textAnchor);
+      color: var(--bg);
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
 
 .footer {
   display: flex;
