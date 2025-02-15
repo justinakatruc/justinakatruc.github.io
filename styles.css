@@ -196,11 +196,6 @@ button {
     display: flex;
     gap: 1rem;
   }
-  
-
-.activeNavColor {
-  font-weight: bold;
-}
 
 .chatbot, .light-mode {
   cursor: pointer;
@@ -426,7 +421,7 @@ button {
 #contact-wrapper form {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.8rem;
   width: 100%;
 }
 
@@ -436,11 +431,13 @@ button {
   border-radius: 10px;
   font-size: 1.5rem;
   border: 2px solid var(--text);
+  transition: all 0.5s ease;
 }
 
 #contact-wrapper form input::placeholder,
 #contact-wrapper form textarea::placeholder {
   color: var(--textSoft);
+  transition: all 0.5s ease;
 }
 
 #contact-wrapper form textarea {
@@ -455,6 +452,7 @@ button {
   color: var(--bg);
   cursor: pointer;
   border-radius: 10px;
+  transition: all 0.5s ease;
 }
 
 #contact-wrapper form button:hover {

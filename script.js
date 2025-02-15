@@ -1,23 +1,10 @@
-$(document).ready(function() {
-    var path = window.location.pathname;
-
-    if (path.endsWith("index.html") || path === "/") {
-        $('#homeNav').addClass('activeNavColor');
-        console.log("home");
-    } else if (path.endsWith("projects.html")) {
-        $('#projectsNav').addClass('activeNavColor');
-    } else if (path.endsWith("resume.html")) {
-        $('#resumeNav').addClass('activeNavColor');
-    } else if (path.endsWith("contact.html")) {
-        $('#contactNav').addClass('activeNavColor');
-    }
-});
 function toggleMenu() {
     const extender = document.querySelector('.extender');
     const menu = document.querySelector('.menu-toggle');
     menu.classList.toggle('active');
     extender.classList.toggle('active');
 }
+
 function toggleLight() {
     const root = document.documentElement;
     const currentTheme = root.getAttribute('data-theme');
@@ -28,4 +15,23 @@ function toggleLight() {
         root.setAttribute('data-theme', 'light');
     }
 }
-  
+
+document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    await fetch(MESSAGE_API_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    });
+
+    alert("Message sent successfully!");
+});
