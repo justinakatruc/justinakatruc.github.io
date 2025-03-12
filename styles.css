@@ -310,6 +310,14 @@ button {
   font-size: 1.3rem;
 }
 
+.profile-info .hcmut {
+  width: 28ch;
+}
+
+.profile-info .vnu {
+  width: 30ch;
+}
+
 .profile-social ul {
   display: flex;
   gap: 0.6rem;

@@ -16,22 +16,22 @@ function toggleLight() {
     }
 }
 
-document.querySelector("form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+// document.querySelector("form").addEventListener("submit", async (e) => {
+//     e.preventDefault();
     
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
+//     const formData = {
+//         name: document.getElementById('name').value,
+//         email: document.getElementById('email').value,
+//         message: document.getElementById('message').value
+//     };
 
-    await fetch(MESSAGE_API_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-    });
+//     await fetch(MESSAGE_API_URL, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(formData)
+//     });
 
-    alert("Message sent successfully!");
-});
+//     alert("Message sent successfully!");
+// });
