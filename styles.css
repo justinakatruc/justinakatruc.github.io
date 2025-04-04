@@ -266,7 +266,9 @@ button {
     } 
   }
 
-
+#home {
+  min-height: 100vh;
+}
 
 /* Profile */
 .profile {
@@ -406,6 +408,25 @@ button {
 #projects {
   background-color: var(--bg);
   padding: 7rem 0;
+}
+
+#project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.project-tasks li {
+  list-style-type: disc;
+  font-size: 1.25rem;
+  padding-left: 0.25em;
+  margin-left: 1.75em;
 }
 /* End of Projects */
 
